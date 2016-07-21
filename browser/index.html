@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>物联网点歌控制器</title>
+        <link rel="stylesheet" href="./vendor/pure-min.css" media="screen" title="no title" charset="utf-8">
+        <style media="screen">
+            body
+            {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="" class="pure-form pure-form-stacked">
+            <fieldset>
+                <legend>物联网点歌控制器</legend>
+
+                <label>歌曲ID</label>
+                <textarea name="songId" class=""></textarea>
+
+                <button type="button" name="vod" disabled class="pure-button pure-button-primary" id="iot-play">点歌</button>
+            </fieldset>
+            <fieldset>
+                <label>当前状态</label>
+                <span id="iot-status" style="border: 1px solid #e5e5e5;display:block;margin: 10px auto; padding:5px;font-size:18px;height:30px;line-height:30px;">Waiting for connection and action..</span>
+
+                <button type="button" id="iot-pause" class="pure-button" disabled>暂停</button>
+                <button type="button" id="iot-resume" class="pure-button" disabled>继续播放</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>一些参考</legend>
+                <table class="pure-table">
+                    <thead>
+                        <tr>
+                            <th>歌名</th>
+                            <th>歌曲ID</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>滑板鞋</td>
+                            <td>28605055</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lost Starts</td>
+                            <td>32102655</td>
+                        </tr>
+
+                        <tr>
+                            <td>See You Again</td>
+                            <td>30953009</td>
+                        </tr>
+                        <tr>
+                            <td>平凡之路</td>
+                            <td>28815250</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    更多请前往  <a href="http://music.163.com" target="_blank">music.163.com</a> 自行搜索
+                </p>
+            </fieldset>
+        </form>
+
+    <script src="./vendor/mqttws31.js"></script>
+    <script src="./vendor/main.js"></script>
+    <script src="./vendor/actions.js"></script>
+    </body>
+</html>
